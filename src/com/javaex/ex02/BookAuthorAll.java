@@ -50,16 +50,16 @@ public class BookAuthorAll {
 			// 4.결과처리
 			// 리스트 형태로 담아서 출력
 			while (rs.next()) {
-				int bookId = rs.getInt("b.book_id");
-				String title = rs.getString("b.title");
-				String pubs = rs.getString("b.pubs");
-				String pubData = rs.getString("b.pub_data");
-				int authorId = rs.getInt("a.author_id");
-				String authorName = rs.getString("a.author_name");
-				String authorDesc = rs.getString("a.author_desc");
+				int bookId = rs.getInt("book_id");
+				String title = rs.getString("title");
+				String pubs = rs.getString("pubs");
+				String pubData = rs.getString("pub_data");
+				int authorId = rs.getInt("author_id");
+				String authorName = rs.getString("author_name");
+				String authorDesc = rs.getString("author_desc");
 
-				BookAuthorVO bookAuthorVO = new BookAuthorVO(bookId, title, pubs, pubData, authorId, authorName,
-						authorDesc);
+				BookAuthorVO bookAuthorVO = new BookAuthorVO(bookId, title, pubs, pubData, 
+															 authorId, authorName, authorDesc);
 
 				baList.add(bookAuthorVO);
 			}
